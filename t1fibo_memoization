@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 19 15:05:24 2020
+
+@author: sandy
+"""
+
+fibo_cache={}
+def fibo(n):
+    if n in fibo_cache:
+        return fibo_cache[n]
+    if n<=1:
+        return n
+    value=fibo(n-1)+fibo(n-2);
+    fibo_cache[n]=value
+    return value
+print(fibo(200))
+
+for n in range(1,51): #computing ratio b/w consecutive terms
+    print(fibo(n+1)/fibo(n))
