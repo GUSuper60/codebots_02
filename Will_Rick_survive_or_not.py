@@ -17,7 +17,7 @@ for _ in range(t):
         blah=(i+1)-(i//7)
         if v>=blah:
             print('Goodbye Rick')
-            print(hashtab[i]-(v-blah+1))
+            print(blah-1)
             flag=False
             break
     if flag==True:
